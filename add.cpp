@@ -1,1 +1,2 @@
 cout<<"dodawanie"<<endl;
+//mo
