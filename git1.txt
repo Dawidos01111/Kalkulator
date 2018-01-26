@@ -1,0 +1,490 @@
+kaja@KajaLINUX ~ $ sudo bash
+[sudo] hasło użytkownika kaja: 
+KajaLINUX ~ # app-get install git
+Nie odnaleziono polecenia 'app-get', czy chodziło ci o:
+ Polecenie 'apt-get' z pakietu 'apt' (main)
+app-get: nie znaleziono polecenia
+KajaLINUX ~ # apt-get install git
+Czytanie list pakietów... Gotowe
+Budowanie drzewa zależności       
+Odczyt informacji o stanie... Gotowe
+git is already the newest version (1:2.7.4-0ubuntu1.3).
+0 aktualizowanych, 0 nowo instalowanych, 0 usuwanych i 0 nieaktualizowanych.
+KajaLINUX ~ # git init
+Initialized empty Git repository in /home/kaja/.git/
+KajaLINUX ~ # pwd
+/home/kaja
+KajaLINUX ~ # cd Pulpit
+KajaLINUX Pulpit # mkdir GIT
+KajaLINUX Pulpit # ls -l
+razem 4
+drwxr-xr-x 2 root root 4096 sty 26 10:45 GIT
+KajaLINUX Pulpit # cd GIT
+KajaLINUX GIT # git init
+Initialized empty Git repository in /home/kaja/Pulpit/GIT/.git/
+KajaLINUX GIT # git pull https://github.com/Dawidos01111/Kalkulator
+remote: Counting objects: 14, done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 14 (delta 4), reused 11 (delta 3), pack-reused 0
+Unpacking objects: 100% (14/14), done.
+From https://github.com/Dawidos01111/Kalkulator
+ * branch            HEAD       -> FETCH_HEAD
+KajaLINUX GIT # gir config --global kajkam1@gmail.com
+Nie odnaleziono polecenia 'gir', czy chodziło ci o:
+ Polecenie 'dir' z pakietu 'coreutils' (main)
+ Polecenie 'git' z pakietu 'git' (main)
+ Polecenie 'gip' z pakietu 'gip' (universe)
+ Polecenie 'gri' z pakietu 'gri' (universe)
+ Polecenie 'gij' z pakietu 'gcj-jre-headless' (universe)
+ Polecenie 'gid' z pakietu 'id-utils' (universe)
+ Polecenie 'gpr' z pakietu 'gpr' (universe)
+gir: nie znaleziono polecenia
+KajaLINUX GIT # git config --global kajkam1@gmail.com
+error: invalid key: kajkam1@gmail.com
+KajaLINUX GIT # git config --global help
+error: key does not contain a section: help
+KajaLINUX GIT # git config --global
+użycie: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <plik>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+
+KajaLINUX GIT # git config --global user.email kajkam1@gmail.com
+KajaLINUX GIT # git config --global user.name KajkaM
+KajaLINUX GIT # touch add.cpp
+KajaLINUX GIT # nano add.cpp
+KajaLINUX GIT # git branch Kaja
+KajaLINUX GIT # git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	add.cpp
+
+nothing added to commit but untracked files present (use "git add" to track)
+KajaLINUX GIT # git commit add.cpp
+error: pathspec 'add.cpp' did not match any file(s) known to git.
+KajaLINUX GIT # git push https://github.com/Dawidos01111/Kalkulator Kaja
+Username for 'https://github.com': KajkaM
+Password for 'https://KajkaM@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/Dawidos01111/Kalkulator
+   f589177..6c20d9d  Kaja -> Kaja
+KajaLINUX GIT # git add add.cpp
+KajaLINUX GIT # git satus
+git: 'satus' is not a git command. See 'git --help'.
+
+Did you mean this?
+	status
+KajaLINUX GIT # git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	nowy plik:     add.cpp
+
+KajaLINUX GIT # git push https://github.com/Dawidos01111/Kalkulator Kaja
+Username for 'https://github.com': KajkaM
+Password for 'https://KajkaM@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Dawidos01111/Kalkulator/'
+KajaLINUX GIT # git pull https://github.com/Dawidos01111/Kalkulator
+From https://github.com/Dawidos01111/Kalkulator
+ * branch            HEAD       -> FETCH_HEAD
+Already up-to-date.
+KajaLINUX GIT # git push https://github.com/Dawidos01111/Kalkulator Kaja
+Username for 'https://github.com': KajkaM
+Password for 'https://KajkaM@github.com': 
+Everything up-to-date
+KajaLINUX GIT # git commit -m "drugi commit"
+[master 0648e84] drugi commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 add.cpp
+KajaLINUX GIT # git status
+On branch master
+nothing to commit, working directory clean
+KajaLINUX GIT # git branch Kaja
+fatal: Gałąź o nazwie 'Kaja'  już istnieje.
+KajaLINUX GIT # git push https://github.com/Dawidos01111/Kalkulator Kaja
+Username for 'https://github.com': KajkaM
+Password for 'https://KajkaM@github.com': 
+Everything up-to-date
+KajaLINUX GIT # git status
+On branch master
+nothing to commit, working directory clean
+KajaLINUX GIT # git pull https://github.com/Dawidos01111/Kalkulator
+From https://github.com/Dawidos01111/Kalkulator
+ * branch            HEAD       -> FETCH_HEAD
+Already up-to-date.
+KajaLINUX GIT # nano add.cpp
+KajaLINUX GIT # git add add.cpp
+KajaLINUX GIT # git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	zmodyfikowany: add.cpp
+
+KajaLINUX GIT # git commit -m "next commit"
+[master cacd192] next commit
+ 1 file changed, 1 insertion(+)
+KajaLINUX GIT # git push https://github.com/Dawidos01111/Kalkulator Kaja
+Username for 'https://github.com': KajkaM
+Password for 'https://KajkaM@github.com': 
+Everything up-to-date
+KajaLINUX GIT # git fetch Kaja
+fatal: 'Kaja' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+KajaLINUX GIT # git remote 
+KajaLINUX GIT # git remote -v
+KajaLINUX GIT # git status
+On branch master
+nothing to commit, working directory clean
+KajaLINUX GIT # nano pliczek.cp
+KajaLINUX GIT # mv pliczek.cp pliczek.cpp
+KajaLINUX GIT # git add pliczek.cpp
+KajaLINUX GIT # git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	nowy plik:     pliczek.cpp
+
+KajaLINUX GIT # git pull http://github.com/Dawidos011111/Kalkulator
+Username for 'https://github.com': KajkaM
+Password for 'https://KajkaM@github.com': 
+remote: Repository not found.
+fatal: repository 'https://github.com/Dawidos011111/Kalkulator/' not found
+KajaLINUX GIT # git pull http://github.com/Dawidos01111/Kalkulator
+From http://github.com/Dawidos01111/Kalkulator
+ * branch            HEAD       -> FETCH_HEAD
+Already up-to-date.
+KajaLINUX GIT # git commit -m "Oto mój commit"
+[master d6c314e] Oto mój commit
+ 1 file changed, 8 insertions(+)
+ create mode 100644 pliczek.cpp
+KajaLINUX GIT # git status
+On branch master
+nothing to commit, working directory clean
+KajaLINUX GIT # git push https://github.com/Dawidos01111/Kalkulator Kaja
+Username for 'https://github.com': KajkaM
+Password for 'https://KajkaM@github.com': 
+Everything up-to-date
+KajaLINUX GIT # git push https://github.com/Dawidos01111/Kalkulator master
+Username for 'https://github.com': KajkaM
+Password for 'https://KajkaM@github.com': 
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (9/9), 905 bytes | 0 bytes/s, done.
+Total 9 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/Dawidos01111/Kalkulator
+   6c20d9d..d6c314e  master -> master
+KajaLINUX GIT # git branch Kaja
+fatal: Gałąź o nazwie 'Kaja'  już istnieje.
+KajaLINUX GIT # mkdir /functions
+KajaLINUX GIT # nano ./functions/prototypes.h
+KajaLINUX GIT # nano ./functions/prototypes.h
+KajaLINUX GIT # nano /functions/prototypes.h
+KajaLINUX GIT #  ls /functions
+prototypes.h
+KajaLINUX GIT # git add ./functions
+fatal: pathspec './functions' nie dopasował żadnych plików
+KajaLINUX GIT # git add /functions
+fatal: /functions: '/functions' is outside repository
+KajaLINUX GIT # ls -l
+razem 20
+-rw-r--r-- 1 root root   30 sty 26 11:08 add.cpp
+-rw-r--r-- 1 root root   87 sty 26 10:48 agus1-test
+drwxr-xr-x 2 root root 4096 sty 26 10:48 Kalkulator
+-rw-r--r-- 1 root root  102 sty 26 11:12 pliczek.cpp
+-rw-r--r-- 1 root root   13 sty 26 10:48 README.md
+KajaLINUX GIT # ls -l
+razem 20
+-rw-r--r-- 1 root root   30 sty 26 11:08 add.cpp
+-rw-r--r-- 1 root root   87 sty 26 10:48 agus1-test
+drwxr-xr-x 2 root root 4096 sty 26 10:48 Kalkulator
+-rw-r--r-- 1 root root  102 sty 26 11:12 pliczek.cpp
+-rw-r--r-- 1 root root   13 sty 26 10:48 README.md
+KajaLINUX GIT # mkdir functions
+KajaLINUX GIT # ls -l
+razem 24
+-rw-r--r-- 1 root root   30 sty 26 11:08 add.cpp
+-rw-r--r-- 1 root root   87 sty 26 10:48 agus1-test
+drwxr-xr-x 2 root root 4096 sty 26 11:20 functions
+drwxr-xr-x 2 root root 4096 sty 26 10:48 Kalkulator
+-rw-r--r-- 1 root root  102 sty 26 11:12 pliczek.cpp
+-rw-r--r-- 1 root root   13 sty 26 10:48 README.md
+KajaLINUX GIT # nano /functions/prototypes.h
+KajaLINUX GIT # git add /functions
+fatal: /functions: '/functions' is outside repository
+KajaLINUX GIT # git add ./functions
+KajaLINUX GIT # git status
+On branch master
+nothing to commit, working directory clean
+KajaLINUX GIT # git add ./functions/prototypes.h
+fatal: pathspec './functions/prototypes.h' nie dopasował żadnych plików
+KajaLINUX GIT # pwd
+/home/kaja/Pulpit/GIT
+KajaLINUX GIT # ls -l ./prototypes
+ls: nie ma dostępu do './prototypes': Nie ma takiego pliku ani katalogu
+KajaLINUX GIT # ls -l
+razem 24
+-rw-r--r-- 1 root root   30 sty 26 11:08 add.cpp
+-rw-r--r-- 1 root root   87 sty 26 10:48 agus1-test
+drwxr-xr-x 2 root root 4096 sty 26 11:20 functions
+drwxr-xr-x 2 root root 4096 sty 26 10:48 Kalkulator
+-rw-r--r-- 1 root root  102 sty 26 11:12 pliczek.cpp
+-rw-r--r-- 1 root root   13 sty 26 10:48 README.md
+KajaLINUX GIT # ls -l ./functions
+razem 0
+KajaLINUX GIT # nano ./functions/prototypes.h
+KajaLINUX GIT # pwd
+/home/kaja/Pulpit/GIT
+KajaLINUX GIT # cd /functions
+KajaLINUX functions # pwd
+/functions
+KajaLINUX functions # cd /home/kaja/Pulpit/GIT
+KajaLINUX GIT # git add ./functions/prototypes.h
+KajaLINUX GIT # git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	nowy plik:     functions/prototypes.h
+
+KajaLINUX GIT # git branch Kaja
+fatal: Gałąź o nazwie 'Kaja'  już istnieje.
+KajaLINUX GIT # git fetch Kaja
+fatal: 'Kaja' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+KajaLINUX GIT # git branch
+  Kaja
+* master
+KajaLINUX GIT # git checkout Kaja
+A	functions/prototypes.h
+Switched to branch 'Kaja'
+KajaLINUX GIT # git status
+On branch Kaja
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	nowy plik:     functions/prototypes.h
+
+KajaLINUX GIT # git branch agus
+KajaLINUX GIT # git checkout agus
+A	functions/prototypes.h
+Switched to branch 'agus'
+KajaLINUX GIT # git branch
+  Kaja
+* agus
+  master
+KajaLINUX GIT # git status
+On branch agus
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	nowy plik:     functions/prototypes.h
+
+KajaLINUX GIT # git push https://github.com/Dawidos01111/Kalkulator agus
+Username for 'https://github.com': KajkaM	
+Password for 'https://KajkaM@github.com': 
+To https://github.com/Dawidos01111/Kalkulator
+ ! [rejected]        agus -> agus (fetch first)
+error: failed to push some refs to 'https://github.com/Dawidos01111/Kalkulator'
+podpowiedź: Updates were rejected because the remote contains work that you do
+podpowiedź: not have locally. This is usually caused by another repository pushing
+podpowiedź: to the same ref. You may want to first integrate the remote changes
+podpowiedź: (e.g., 'git pull ...') before pushing again.
+podpowiedź: See the 'Note about fast-forwards' in 'git push --help' for details.
+KajaLINUX GIT # git pull http://github.com/Dawidos01111/Kalkulator
+From http://github.com/Dawidos01111/Kalkulator
+ * branch            HEAD       -> FETCH_HEAD
+Updating 6c20d9d..d6c314e
+Fast-forward
+ add.cpp     | 2 ++
+ pliczek.cpp | 8 ++++++++
+ 2 files changed, 10 insertions(+)
+ create mode 100644 add.cpp
+ create mode 100644 pliczek.cpp
+KajaLINUX GIT # git push https://github.com/Dawidos01111/Kalkulator agus
+Username for 'https://github.com': KajkaM
+Password for 'https://KajkaM@github.com': 
+To https://github.com/Dawidos01111/Kalkulator
+ ! [rejected]        agus -> agus (fetch first)
+error: failed to push some refs to 'https://github.com/Dawidos01111/Kalkulator'
+podpowiedź: Updates were rejected because the remote contains work that you do
+podpowiedź: not have locally. This is usually caused by another repository pushing
+podpowiedź: to the same ref. You may want to first integrate the remote changes
+podpowiedź: (e.g., 'git pull ...') before pushing again.
+podpowiedź: See the 'Note about fast-forwards' in 'git push --help' for details.
+KajaLINUX GIT # git status
+On branch agus
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	nowy plik:     functions/prototypes.h
+
+KajaLINUX GIT # git fetch origin
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+KajaLINUX GIT # git origin
+git: 'origin' is not a git command. See 'git --help'.
+KajaLINUX GIT # git remote -v
+KajaLINUX GIT # git clone https://github.com/Dawidos01111/Kalkulator
+Cloning into 'Kalkulator'...
+remote: Counting objects: 26, done.
+remote: Compressing objects: 100% (16/16), done.
+remote: Total 26 (delta 8), reused 22 (delta 6), pack-reused 0
+Unpacking objects: 100% (26/26), done.
+Checking connectivity... done.
+KajaLINUX GIT # git status
+On branch agus
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	nowy plik:     functions/prototypes.h
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	zmodyfikowany: Kalkulator (new commits)
+
+KajaLINUX GIT # git pull http://github.com/Dawidos01111/Kalkulator
+fatal: unable to access 'http://github.com/Dawidos01111/Kalkulator/': Could not resolve host: github.com
+KajaLINUX GIT # git pull http://github.com/Dawidos01111/Kalkulator
+fatal: unable to access 'http://github.com/Dawidos01111/Kalkulator/': Could not resolve host: github.com
+KajaLINUX GIT # git status
+On branch agus
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	nowy plik:     functions/prototypes.h
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	zmodyfikowany: Kalkulator (new commits)
+
+KajaLINUX GIT # git checkout Kaja
+M	Kalkulator
+A	functions/prototypes.h
+Switched to branch 'Kaja'
+KajaLINUX GIT # git commit -m "Another commit"
+[Kaja 1b722fa] Another commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 functions/prototypes.h
+KajaLINUX GIT # git push https://github.com/Dawidos01111/Kalkulator Kaja
+fatal: unable to access 'https://github.com/Dawidos01111/Kalkulator/': Could not resolve host: github.com
+KajaLINUX GIT # git push https://github.com/Dawidos01111/Kalkulator Kaja
+Username for 'https://github.com': KajkaM
+Password for 'https://KajkaM@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 327 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Dawidos01111/Kalkulator
+   6c20d9d..1b722fa  Kaja -> Kaja
+KajaLINUX GIT # git status
+On branch Kaja
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	zmodyfikowany: Kalkulator (new commits)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+KajaLINUX GIT # git remote -v
+KajaLINUX GIT # ls -l
+razem 16
+-rw-r--r-- 1 root root   87 sty 26 10:48 agus1-test
+drwxr-xr-x 2 root root 4096 sty 26 11:23 functions
+drwxr-xr-x 4 root root 4096 sty 26 11:37 Kalkulator
+-rw-r--r-- 1 root root   13 sty 26 10:48 README.md
+KajaLINUX GIT # ahus1-test
+ahus1-test: nie znaleziono polecenia
+KajaLINUX GIT # nano agus1-test
+KajaLINUX GIT # 
+KajaLINUX GIT # GIT STATUS
+GIT: nie znaleziono polecenia
+KajaLINUX GIT # git status
+On branch Kaja
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	zmodyfikowany: Kalkulator (new commits)
+	zmodyfikowany: agus1-test
+
+no changes added to commit (use "git add" and/or "git commit -a")
+KajaLINUX GIT # git add agus1-test
+KajaLINUX GIT # git add Kalkulator
+KajaLINUX GIT # git status
+On branch Kaja
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	zmodyfikowany: Kalkulator
+	zmodyfikowany: agus1-test
+
+KajaLINUX GIT # git commit
+[Kaja 41db90b] 1 zmiana
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+KajaLINUX GIT # git push https://github.com/Dawidos01111/Kalkulator Kaja
+Username for 'https://github.com': KajkaM
+Password for 'https://KajkaM@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 391 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Dawidos01111/Kalkulator
+   1b722fa..41db90b  Kaja -> Kaja
+KajaLINUX GIT # 
+
