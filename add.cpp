@@ -1,0 +1,1 @@
+cout<<"dodawanie"<<endl;
