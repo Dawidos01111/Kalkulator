@@ -1,0 +1,2 @@
+cout<<"dodawanie"<<endl;
+//mo
