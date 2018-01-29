@@ -1,1 +1,17 @@
-#test
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+	int rok;
+	cin >> rok;
+	if ((rok % 4 == 0 && rok % 100 != 0) || rok % 400 == 0) //% to jest dzielenie modulo
+	{
+		cout << rok << " rok jest przestepny";
+	}
+	
+	_getch(); //program czeka aż zostanie naciśnięty klawisz aby się wyłączyć
+
+    return 0;
+}
